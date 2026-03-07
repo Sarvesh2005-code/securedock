@@ -1,0 +1,6 @@
+Forensic Chain of Custody Log
+=============================
+File Name: mock_mmssms.db
+Original Path: C:/Dev/Projects/Web-Projects/securedock/tests/mock_mmssms.db
+SHA-256 Hash: 5e048ee519933679a315ff5089a008a49bfd36fc65049ea95489c98c93e2b605
+Acquired On: 2026-03-07 21:14:32 UTC

@@ -1,0 +1,13 @@
+Timestamp (UTC),Sender,Receiver,Body,Service,Source File,Status
+2026-03-02 11:42:10,+18885551111,Me,Are we still on for the meeting?,SMS,C:/Dev/Projects/Web-Projects/securedock/tests/mock_sms.db,Active
+2026-03-02 11:58:50,Me,+18885551111,"Yes, see you there.",SMS,C:/Dev/Projects/Web-Projects/securedock/tests/mock_sms.db,Active
+2026-03-07 15:38:51,Unknown (Carved),Unknown (Carved),[DELETED FRAGMENT]: SQLite format 3,Raw Carve,C:/Dev/Projects/Web-Projects/securedock/tests/mock_sms.db,Deleted (Carved)
+2026-03-07 15:38:51,Unknown (Carved),Unknown (Carved),[DELETED FRAGMENT]: tablemessagemessage,Raw Carve,C:/Dev/Projects/Web-Projects/securedock/tests/mock_sms.db,Deleted (Carved)
+2026-03-07 15:38:51,Unknown (Carved),Unknown (Carved),"[DELETED FRAGMENT]: CREATE TABLE message (rowid INTEGER PRIMARY KEY, text TEXT, is_from_me INTEGER, handle_id INTEGER, date INTEGER, service TEXT)P",Raw Carve,C:/Dev/Projects/Web-Projects/securedock/tests/mock_sms.db,Deleted (Carved)
+2026-03-07 15:38:51,Unknown (Carved),Unknown (Carved),[DELETED FRAGMENT]: }tablehandlehandle,Raw Carve,C:/Dev/Projects/Web-Projects/securedock/tests/mock_sms.db,Deleted (Carved)
+2026-03-07 15:38:51,Unknown (Carved),Unknown (Carved),"[DELETED FRAGMENT]: CREATE TABLE handle (rowid INTEGER PRIMARY KEY, id TEXT)",Raw Carve,C:/Dev/Projects/Web-Projects/securedock/tests/mock_sms.db,Deleted (Carved)
+2026-03-07 15:38:51,Unknown (Carved),Unknown (Carved),[DELETED FRAGMENT]: 1john.doe@apple.com,Raw Carve,C:/Dev/Projects/Web-Projects/securedock/tests/mock_sms.db,Deleted (Carved)
+2026-03-07 15:38:51,Unknown (Carved),Unknown (Carved),[DELETED FRAGMENT]: %+18885551111,Raw Carve,C:/Dev/Projects/Web-Projects/securedock/tests/mock_sms.db,Deleted (Carved)
+2026-03-07 15:38:51,Unknown (Carved),Unknown (Carved),[DELETED FRAGMENT]: The briefcase is under the bridge.,Raw Carve,C:/Dev/Projects/Web-Projects/securedock/tests/mock_sms.db,Deleted (Carved)
+2026-03-07 15:38:51,Unknown (Carved),Unknown (Carved),"[DELETED FRAGMENT]: Yes, see you there./U",Raw Carve,C:/Dev/Projects/Web-Projects/securedock/tests/mock_sms.db,Deleted (Carved)
+2026-03-07 15:38:51,Unknown (Carved),Unknown (Carved),[DELETED FRAGMENT]: Are we still on for the meeting?/U,Raw Carve,C:/Dev/Projects/Web-Projects/securedock/tests/mock_sms.db,Deleted (Carved)
