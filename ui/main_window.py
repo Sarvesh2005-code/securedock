@@ -14,32 +14,32 @@ from core.carver import carve_deleted_messages
 from core.analyzer import sort_by_timestamp, deduplicate_messages, filter_by_keyword
 from core.reporter import export_to_csv, export_forensic_report_pdf
 
-def apply_dark_theme(app):
+def apply_light_theme(app):
     app.setStyle("Fusion")
     palette = QPalette()
-    palette.setColor(QPalette.ColorRole.Window, QColor(40, 44, 52))
-    palette.setColor(QPalette.ColorRole.WindowText, QColor(215, 218, 224))
-    palette.setColor(QPalette.ColorRole.Base, QColor(30, 33, 39))
-    palette.setColor(QPalette.ColorRole.AlternateBase, QColor(40, 44, 52))
-    palette.setColor(QPalette.ColorRole.ToolTipBase, QColor(215, 218, 224))
-    palette.setColor(QPalette.ColorRole.ToolTipText, QColor(40, 44, 52))
-    palette.setColor(QPalette.ColorRole.Text, QColor(215, 218, 224))
-    palette.setColor(QPalette.ColorRole.Button, QColor(50, 56, 66))
-    palette.setColor(QPalette.ColorRole.ButtonText, QColor(215, 218, 224))
+    palette.setColor(QPalette.ColorRole.Window, QColor(250, 250, 250))
+    palette.setColor(QPalette.ColorRole.WindowText, QColor(30, 30, 30))
+    palette.setColor(QPalette.ColorRole.Base, QColor(255, 255, 255))
+    palette.setColor(QPalette.ColorRole.AlternateBase, QColor(245, 245, 245))
+    palette.setColor(QPalette.ColorRole.ToolTipBase, QColor(255, 255, 220))
+    palette.setColor(QPalette.ColorRole.ToolTipText, QColor(30, 30, 30))
+    palette.setColor(QPalette.ColorRole.Text, QColor(30, 30, 30))
+    palette.setColor(QPalette.ColorRole.Button, QColor(240, 240, 240))
+    palette.setColor(QPalette.ColorRole.ButtonText, QColor(30, 30, 30))
     palette.setColor(QPalette.ColorRole.BrightText, QColor(255, 0, 0))
-    palette.setColor(QPalette.ColorRole.Link, QColor(97, 175, 239))
-    palette.setColor(QPalette.ColorRole.Highlight, QColor(97, 175, 239))
-    palette.setColor(QPalette.ColorRole.HighlightedText, QColor(40, 44, 52))
+    palette.setColor(QPalette.ColorRole.Link, QColor(0, 102, 204))
+    palette.setColor(QPalette.ColorRole.Highlight, QColor(0, 120, 215))
+    palette.setColor(QPalette.ColorRole.HighlightedText, QColor(255, 255, 255))
     app.setPalette(palette)
     
     app.setStyleSheet("""
-        QToolTip { color: #ffffff; background-color: #282c34; border: 1px solid white; }
-        QPushButton { border: 1px solid #3b4048; border-radius: 4px; padding: 6px; background-color: #3b4048; font-weight: bold;}
-        QPushButton:hover { background-color: #4b5263; }
-        QLineEdit, QDateEdit, QTextEdit { border: 1px solid #4b5263; border-radius: 4px; padding: 4px; background-color: #1e2227; color: #abb2bf;}
-        QTableWidget { gridline-color: #3b4048; border: 1px solid #4b5263; }
-        QHeaderView::section { background-color: #282c34; border: 1px solid #3b4048; padding: 4px; font-weight: bold; color: #abb2bf;}
-        QTableWidget::item:selected { background-color: #3e4451; }
+        QToolTip { color: #303030; background-color: #ffffe1; border: 1px solid #767676; }
+        QPushButton { border: 1px solid #c0c0c0; border-radius: 4px; padding: 6px; background-color: #f5f5f5; font-weight: bold; color: #333333;}
+        QPushButton:hover { background-color: #e5e5e5; }
+        QLineEdit, QDateEdit, QTextEdit { border: 1px solid #c0c0c0; border-radius: 4px; padding: 4px; background-color: #ffffff; color: #333333;}
+        QTableWidget { gridline-color: #e0e0e0; border: 1px solid #c0c0c0; background-color: #ffffff; color: #333333;}
+        QHeaderView::section { background-color: #f0f0f0; border: 1px solid #d0d0d0; padding: 4px; font-weight: bold; color: #333333;}
+        QTableWidget::item:selected { background-color: #cce8ff; color: #000000; }
     """)
 
 class RecoveryWorker(QThread):
@@ -130,10 +130,10 @@ class MainWindow(QMainWindow):
         self.lbl_stats_deleted = QLabel("Deleted (Carved): 0")
         
         # Styling stats labels slightly larger and distinct
-        stat_style = "background-color: #282c34; padding: 6px; border-radius: 4px; border: 1px solid #3b4048;"
-        self.lbl_stats_total.setStyleSheet(stat_style + " color: #abb2bf;")
-        self.lbl_stats_active.setStyleSheet(stat_style + " color: #98c379; font-weight: bold;")
-        self.lbl_stats_deleted.setStyleSheet(stat_style + " color: #e06c75; font-weight: bold;") 
+        stat_style = "background-color: #f8f9fa; padding: 6px; border-radius: 4px; border: 1px solid #d0d0d0;"
+        self.lbl_stats_total.setStyleSheet(stat_style + " color: #333333;")
+        self.lbl_stats_active.setStyleSheet(stat_style + " color: #2e7d32; font-weight: bold;")
+        self.lbl_stats_deleted.setStyleSheet(stat_style + " color: #c62828; font-weight: bold;") 
         
         stats_layout.addWidget(self.lbl_stats_total)
         stats_layout.addWidget(self.lbl_stats_active)
@@ -190,10 +190,10 @@ class MainWindow(QMainWindow):
         details_layout = QVBoxLayout(details_widget)
         details_layout.setContentsMargins(0, 5, 0, 0)
         lbl_details = QLabel("Message Details / Hex Viewer")
-        lbl_details.setStyleSheet("font-weight: bold; color: #61afef;")
+        lbl_details.setStyleSheet("font-weight: bold; color: #0056b3;")
         self.txt_details = QTextEdit()
         self.txt_details.setReadOnly(True)
-        self.txt_details.setStyleSheet("background-color: #1e2227; color: #abb2bf; font-family: Consolas, monospace;")
+        self.txt_details.setStyleSheet("background-color: #fafafa; color: #212529; font-family: Consolas, monospace;")
         details_layout.addWidget(lbl_details)
         details_layout.addWidget(self.txt_details)
         
@@ -298,12 +298,12 @@ class MainWindow(QMainWindow):
             
             # Highlight deleted messages
             if msg.is_deleted:
-                item_status.setForeground(QColor("#e06c75"))
-                item_time.setForeground(QColor("#e06c75"))
-                item_sender.setForeground(QColor("#e06c75"))
-                item_receiver.setForeground(QColor("#e06c75"))
+                item_status.setForeground(QColor("#c62828"))
+                item_time.setForeground(QColor("#c62828"))
+                item_sender.setForeground(QColor("#c62828"))
+                item_receiver.setForeground(QColor("#c62828"))
                 # slightly darker for body so it isn't overwhelming red
-                item_body.setForeground(QColor("#d25d5d")) 
+                item_body.setForeground(QColor("#b71c1c")) 
                 
             # Make table read-only
             for item in (item_time, item_sender, item_receiver, item_body, item_status):

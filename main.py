@@ -1,12 +1,12 @@
 import sys
 from PyQt6.QtWidgets import QApplication
-from ui.main_window import MainWindow, apply_dark_theme
+from ui.main_window import MainWindow, apply_light_theme
 
 def main():
     app = QApplication(sys.argv)
     
-    # Apply professional dark theme
-    apply_dark_theme(app)
+    # Apply professional light theme
+    apply_light_theme(app)
     
     window = MainWindow()
     window.show()
